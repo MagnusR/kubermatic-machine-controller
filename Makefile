@@ -20,11 +20,11 @@ GOOS ?= $(shell go env GOOS)
 
 export CGO_ENABLED := 0
 
-export GIT_TAG ?= $(shell git tag --points-at HEAD)
+export GIT_TAG ?= $(shell git tag --list | head -1 )
 
 export GOFLAGS?=-mod=readonly -trimpath
 
-REGISTRY ?= quay.io
+REGISTRY ?= ${DOCKER_REGISTRY}
 REGISTRY_NAMESPACE ?= kubermatic
 
 LDFLAGS ?= -ldflags '-s -w'
