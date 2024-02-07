@@ -17,9 +17,9 @@ limitations under the License.
 package rhsm
 
 import (
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/types"
-	kuberneteshelper "github.com/kubermatic/machine-controller/pkg/kubernetes"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/types"
+	kuberneteshelper "github.com/magnusr/kubermatic-machine-controller/pkg/kubernetes"
 )
 
 const (

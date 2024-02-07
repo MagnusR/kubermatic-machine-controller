@@ -19,7 +19,7 @@ package flatcar
 import (
 	"encoding/json"
 
-	"github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 
 	"k8s.io/apimachinery/pkg/runtime"
 )

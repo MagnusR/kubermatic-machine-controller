@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 )
 
 const cloudProviderPacket = "packet"

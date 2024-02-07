@@ -23,7 +23,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 )
 
 const (

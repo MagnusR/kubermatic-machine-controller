@@ -22,12 +22,12 @@ import (
 
 	"github.com/gophercloud/gophercloud/testhelper"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	clusterv1alpha1 "github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	anxtypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/anexia/types"
-	cloudprovidertypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/types"
-	"github.com/kubermatic/machine-controller/pkg/providerconfig/types"
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	clusterv1alpha1 "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	anxtypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/anexia/types"
+	cloudprovidertypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"

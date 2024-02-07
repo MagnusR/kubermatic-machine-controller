@@ -28,10 +28,10 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/plugin"
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
-	"github.com/kubermatic/machine-controller/pkg/userdata/convert"
-	userdatahelper "github.com/kubermatic/machine-controller/pkg/userdata/helper"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/plugin"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/userdata/convert"
+	userdatahelper "github.com/magnusr/kubermatic-machine-controller/pkg/userdata/helper"
 )
 
 // Provider is a pkg/userdata/plugin.Provider implementation.

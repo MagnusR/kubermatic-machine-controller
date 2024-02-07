@@ -25,9 +25,9 @@ import (
 
 	"github.com/Masterminds/semver/v3"
 
-	clusterv1alpha1 "github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
-	"github.com/kubermatic/machine-controller/pkg/jsonutil"
+	clusterv1alpha1 "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/jsonutil"
 
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"

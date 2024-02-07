@@ -326,7 +326,7 @@ func getFreeFloatingIPs(netClient *gophercloud.ServiceClient, floatingIPPool *os
 	var freeFIPs []osfloatingips.FloatingIP
 	for _, f := range allFIPs {
 		// See some details about this test here:
-		// https://github.com/kubermatic/machine-controller/pull/28#discussion_r163773619
+		// https://github.com/magnusr/kubermatic-machine-controller/pull/28#discussion_r163773619
 		// The check of FixedIP has been added to avoid false positives on OTC,
 		// where FIPs associated to Classic LoadBalandcers never get assigned a
 		// PortID even when they are in use.

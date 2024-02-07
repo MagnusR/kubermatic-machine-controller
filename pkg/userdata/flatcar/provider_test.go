@@ -28,12 +28,12 @@ import (
 
 	"go.uber.org/zap"
 
-	clusterv1alpha1 "github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	"github.com/kubermatic/machine-controller/pkg/apis/plugin"
-	"github.com/kubermatic/machine-controller/pkg/containerruntime"
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
-	testhelper "github.com/kubermatic/machine-controller/pkg/test"
-	"github.com/kubermatic/machine-controller/pkg/userdata/cloud"
+	clusterv1alpha1 "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/plugin"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/containerruntime"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
+	testhelper "github.com/magnusr/kubermatic-machine-controller/pkg/test"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/userdata/cloud"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"

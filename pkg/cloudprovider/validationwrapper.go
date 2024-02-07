@@ -23,9 +23,9 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/instance"
-	cloudprovidertypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/instance"
+	cloudprovidertypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/types"
 
 	"k8s.io/apimachinery/pkg/types"
 )

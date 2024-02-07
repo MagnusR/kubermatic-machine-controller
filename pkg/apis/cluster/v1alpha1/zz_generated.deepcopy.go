@@ -22,7 +22,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	common "github.com/kubermatic/machine-controller/pkg/apis/cluster/common"
+	common "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/common"
 	v1 "k8s.io/api/core/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	intstr "k8s.io/apimachinery/pkg/util/intstr"

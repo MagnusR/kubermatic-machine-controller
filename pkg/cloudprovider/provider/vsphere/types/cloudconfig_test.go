@@ -22,7 +22,7 @@ import (
 
 	"gopkg.in/gcfg.v1"
 
-	testhelper "github.com/kubermatic/machine-controller/pkg/test"
+	testhelper "github.com/magnusr/kubermatic-machine-controller/pkg/test"
 )
 
 var update = flag.Bool("update", false, "update testdata files")

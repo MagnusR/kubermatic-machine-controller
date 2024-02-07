@@ -16,7 +16,7 @@ postsubmits:
   - name: ci-push-machine-controller-image
     always_run: true
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     branches:
       - ^main$
       # Match on tags
@@ -47,7 +47,7 @@ postsubmits:
   - name: ci-push-machine-controller-upload-gocache
     always_run: true
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     branches:
       - ^main$
     labels:

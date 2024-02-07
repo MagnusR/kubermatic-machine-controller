@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
 
 	"k8s.io/client-go/tools/clientcmd"
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"

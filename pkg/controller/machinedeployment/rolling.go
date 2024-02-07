@@ -23,8 +23,8 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	dutil "github.com/kubermatic/machine-controller/pkg/controller/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	dutil "github.com/magnusr/kubermatic-machine-controller/pkg/controller/util"
 
 	"k8s.io/utils/integer"
 	"sigs.k8s.io/controller-runtime/pkg/client"

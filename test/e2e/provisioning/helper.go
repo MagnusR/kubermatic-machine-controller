@@ -26,7 +26,7 @@ import (
 
 	"github.com/Masterminds/semver/v3"
 
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 )
 
 var (
@@ -277,7 +277,7 @@ func testScenario(t *testing.T, testCase scenario, cloudProvider string, testPar
 
 	// default kubeconfig to the hardcoded path at which `make e2e-cluster` creates its new kubeconfig
 	gopath := os.Getenv("GOPATH")
-	projectDir := filepath.Join(gopath, "src/github.com/kubermatic/machine-controller")
+	projectDir := filepath.Join(gopath, "src/github.com/magnusr/kubermatic-machine-controller")
 	kubeConfig := filepath.Join(projectDir, ".kubeconfig")
 	_, err := os.Stat(kubeConfig)
 	if err != nil {

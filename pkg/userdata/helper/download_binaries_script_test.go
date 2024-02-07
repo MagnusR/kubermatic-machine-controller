@@ -22,7 +22,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/test"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/test"
 )
 
 const goldenExtension = ".golden"

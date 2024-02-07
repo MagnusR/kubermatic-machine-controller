@@ -16,7 +16,7 @@ presubmits:
   - name: pull-machine-controller-e2e-scaleway
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-scaleway: "true"
       preset-hetzner: "true"

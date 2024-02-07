@@ -28,8 +28,8 @@ import (
 	kubevirtv1 "kubevirt.io/api/core/v1"
 	cdiv1beta1 "kubevirt.io/containerized-data-importer-api/pkg/apis/core/v1beta1"
 
-	cloudprovidertesting "github.com/kubermatic/machine-controller/pkg/cloudprovider/testing"
-	"github.com/kubermatic/machine-controller/pkg/providerconfig"
+	cloudprovidertesting "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/testing"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig"
 
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/equality"

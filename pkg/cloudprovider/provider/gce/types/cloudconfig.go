@@ -27,7 +27,7 @@ import (
 
 	"github.com/Masterminds/sprig/v3"
 
-	"github.com/kubermatic/machine-controller/pkg/ini"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/ini"
 )
 
 // cloudConfigTemplate renders the cloud-config in gcfg format. All

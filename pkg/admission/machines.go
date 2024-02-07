@@ -24,12 +24,12 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/common"
-	clusterv1alpha1 "github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider"
-	controllerutil "github.com/kubermatic/machine-controller/pkg/controller/util"
-	"github.com/kubermatic/machine-controller/pkg/providerconfig"
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/common"
+	clusterv1alpha1 "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider"
+	controllerutil "github.com/magnusr/kubermatic-machine-controller/pkg/controller/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
 
 	admissionv1 "k8s.io/api/admission/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"

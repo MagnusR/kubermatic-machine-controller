@@ -16,7 +16,7 @@ presubmits:
   - name: pull-machine-controller-e2e-vsphere
     run_if_changed: "(pkg/cloudprovider/provider/vsphere/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-hetzner: "true"
       preset-e2e-ssh: "true"
@@ -48,7 +48,7 @@ presubmits:
   - name: pull-machine-controller-e2e-vsphere-datastore-cluster
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-vsphere: "true"
       preset-rhel: "true"
@@ -80,7 +80,7 @@ presubmits:
   - name: pull-machine-controller-e2e-vsphere-resource-pool
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-vsphere: "true"
       preset-rhel: "true"
@@ -112,7 +112,7 @@ presubmits:
   - name: pull-machine-controller-e2e-vsphere-multiple-networks
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-hetzner: "true"
       preset-e2e-ssh: "true"

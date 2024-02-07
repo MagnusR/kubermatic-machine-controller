@@ -31,9 +31,9 @@ import (
 	"go.uber.org/zap"
 	"gomodules.xyz/jsonpatch/v2"
 
-	machinecontroller "github.com/kubermatic/machine-controller/pkg/controller/machine"
-	"github.com/kubermatic/machine-controller/pkg/node"
-	userdatamanager "github.com/kubermatic/machine-controller/pkg/userdata/manager"
+	machinecontroller "github.com/magnusr/kubermatic-machine-controller/pkg/controller/machine"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/node"
+	userdatamanager "github.com/magnusr/kubermatic-machine-controller/pkg/userdata/manager"
 
 	admissionv1 "k8s.io/api/admission/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
