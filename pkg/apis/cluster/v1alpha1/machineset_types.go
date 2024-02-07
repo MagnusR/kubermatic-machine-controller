@@ -19,7 +19,7 @@ package v1alpha1
 import (
 	"log"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/common"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/common"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	metav1validation "k8s.io/apimachinery/pkg/apis/meta/v1/validation"

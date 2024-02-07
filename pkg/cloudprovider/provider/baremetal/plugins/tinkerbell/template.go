@@ -19,7 +19,7 @@ package tinkerbell
 import (
 	"github.com/tinkerbell/tink/workflow"
 
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
 )
 
 func createTemplate(tinkServerAddress, imageRepoAddress string, cfg *plugins.CloudConfigSettings) *workflow.Workflow {

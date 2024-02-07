@@ -28,10 +28,10 @@ import (
 	nutanixclient "github.com/nutanix-cloud-native/prism-go-client"
 	nutanixv3 "github.com/nutanix-cloud-native/prism-go-client/v3"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/common"
-	cloudprovidererrors "github.com/kubermatic/machine-controller/pkg/cloudprovider/errors"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/instance"
-	nutanixtypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/nutanix/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/common"
+	cloudprovidererrors "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/errors"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/instance"
+	nutanixtypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/nutanix/types"
 
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/wait"

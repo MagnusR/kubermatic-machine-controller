@@ -16,7 +16,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws
     run_if_changed: "(pkg/cloudprovider/provider/aws/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -48,7 +48,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-spot-instance-legacy-userdata
     always_run: true
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -82,7 +82,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-arm
     run_if_changed: "(pkg/cloudprovider/provider/aws/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -113,7 +113,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-ebs-encryption-enabled
     run_if_changed: "(pkg/cloudprovider/provider/aws/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -144,7 +144,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-spot-instance
     always_run: true
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -176,7 +176,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-flatcar-coreos-cloud-init
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -207,7 +207,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-centos8
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws: "true"
       preset-hetzner: "true"
@@ -238,7 +238,7 @@ presubmits:
   - name: pull-machine-controller-e2e-aws-assume-role
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-aws-assume-role: "true"
       preset-hetzner: "true"

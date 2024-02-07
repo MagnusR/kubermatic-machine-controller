@@ -1,4 +1,4 @@
-module github.com/kubermatic/machine-controller
+module github.com/magnusr/kubermatic-machine-controller
 
 go 1.21
 

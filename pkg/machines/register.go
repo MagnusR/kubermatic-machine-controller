@@ -19,7 +19,7 @@ package machines
 import (
 	"reflect"
 
-	"github.com/kubermatic/machine-controller/pkg/machines/v1alpha1"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/machines/v1alpha1"
 )
 
 type resource struct {

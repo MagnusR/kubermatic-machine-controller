@@ -27,8 +27,8 @@ import (
 	"github.com/vmware/govmomi/simulator"
 	"go.uber.org/zap"
 
-	cloudprovidertesting "github.com/kubermatic/machine-controller/pkg/cloudprovider/testing"
-	"github.com/kubermatic/machine-controller/pkg/providerconfig"
+	cloudprovidertesting "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/testing"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig"
 
 	"k8s.io/utils/ptr"
 	fakectrlruntimeclient "sigs.k8s.io/controller-runtime/pkg/client/fake"

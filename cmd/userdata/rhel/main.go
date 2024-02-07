@@ -26,9 +26,9 @@ import (
 
 	"go.uber.org/zap"
 
-	machinecontrollerlog "github.com/kubermatic/machine-controller/pkg/log"
-	userdataplugin "github.com/kubermatic/machine-controller/pkg/userdata/plugin"
-	"github.com/kubermatic/machine-controller/pkg/userdata/rhel"
+	machinecontrollerlog "github.com/magnusr/kubermatic-machine-controller/pkg/log"
+	userdataplugin "github.com/magnusr/kubermatic-machine-controller/pkg/userdata/plugin"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/userdata/rhel"
 )
 
 func main() {

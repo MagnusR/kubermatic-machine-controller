@@ -33,14 +33,14 @@ import (
 	compute "google.golang.org/api/compute/v1"
 	"google.golang.org/api/googleapi"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/cluster/common"
-	clusterv1alpha1 "github.com/kubermatic/machine-controller/pkg/apis/cluster/v1alpha1"
-	cloudprovidererrors "github.com/kubermatic/machine-controller/pkg/cloudprovider/errors"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/instance"
-	gcetypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/gce/types"
-	cloudprovidertypes "github.com/kubermatic/machine-controller/pkg/cloudprovider/types"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
-	"github.com/kubermatic/machine-controller/pkg/providerconfig"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/common"
+	clusterv1alpha1 "github.com/magnusr/kubermatic-machine-controller/pkg/apis/cluster/v1alpha1"
+	cloudprovidererrors "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/errors"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/instance"
+	gcetypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/gce/types"
+	cloudprovidertypes "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/types"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig"
 
 	"k8s.io/apimachinery/pkg/types"
 )

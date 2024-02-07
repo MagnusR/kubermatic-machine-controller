@@ -24,8 +24,8 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
-	testhelper "github.com/kubermatic/machine-controller/pkg/test"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
+	testhelper "github.com/magnusr/kubermatic-machine-controller/pkg/test"
 
 	corev1 "k8s.io/api/core/v1"
 )

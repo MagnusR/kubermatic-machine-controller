@@ -49,13 +49,13 @@ machine-controller-userdata-%: cmd/userdata/% $(shell find cmd/userdata/$* pkg -
 	GOOS=$(GOOS) go build -v \
 		$(LDFLAGS) \
 		-o $@ \
-		github.com/kubermatic/machine-controller/cmd/userdata/$*
+		github.com/magnusr/kubermatic-machine-controller/cmd/userdata/$*
 
 %: cmd/% $(shell find cmd/$* pkg -name '*.go')
 	GOOS=$(GOOS) go build -v \
 		$(LDFLAGS) \
 		-o $@ \
-		github.com/kubermatic/machine-controller/cmd/$*
+		github.com/magnusr/kubermatic-machine-controller/cmd/$*
 
 .PHONY: clean
 clean:
@@ -86,10 +86,10 @@ docker-image-publish: docker-image
 .PHONY: test-unit-docker
 test-unit-docker:
 	@docker run --rm \
-		-v $$PWD:/go/src/github.com/kubermatic/machine-controller \
+		-v $$PWD:/go/src/github.com/magnusr/kubermatic-machine-controller \
 		-v $$PWD/.buildcache:/cache \
 		-e GOCACHE=/cache \
-		-w /go/src/github.com/kubermatic/machine-controller \
+		-w /go/src/github.com/magnusr/kubermatic-machine-controller \
 		golang:$(GO_VERSION) \
 			make test-unit "GOFLAGS=$(GOFLAGS)"
 

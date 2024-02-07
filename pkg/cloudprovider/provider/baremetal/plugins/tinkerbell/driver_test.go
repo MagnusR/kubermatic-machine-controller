@@ -28,10 +28,10 @@ import (
 	"github.com/tinkerbell/tink/protos/template"
 	"github.com/tinkerbell/tink/workflow"
 
-	cloudprovidererrors "github.com/kubermatic/machine-controller/pkg/cloudprovider/errors"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
-	tinkerbellclient "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/client"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/metadata"
+	cloudprovidererrors "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/errors"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
+	tinkerbellclient "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/client"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/metadata"
 
 	"k8s.io/apimachinery/pkg/runtime"
 )

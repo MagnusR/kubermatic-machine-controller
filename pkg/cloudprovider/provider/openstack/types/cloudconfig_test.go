@@ -23,8 +23,8 @@ import (
 
 	"gopkg.in/gcfg.v1"
 
-	"github.com/kubermatic/machine-controller/pkg/ini"
-	testhelper "github.com/kubermatic/machine-controller/pkg/test"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/ini"
+	testhelper "github.com/magnusr/kubermatic-machine-controller/pkg/test"
 
 	"k8s.io/utils/ptr"
 )

@@ -29,9 +29,9 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/plugin"
-	providerconfigtypes "github.com/kubermatic/machine-controller/pkg/providerconfig/types"
-	userdatahelper "github.com/kubermatic/machine-controller/pkg/userdata/helper"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/plugin"
+	providerconfigtypes "github.com/magnusr/kubermatic-machine-controller/pkg/providerconfig/types"
+	userdatahelper "github.com/magnusr/kubermatic-machine-controller/pkg/userdata/helper"
 )
 
 // Provider is a pkg/userdata/plugin.Provider implementation.
@@ -225,7 +225,7 @@ write_files:
     {{ end }}
 
     # Update grub to include kernel command options to enable swap accounting.
-    # Exclude alibaba cloud until this is fixed https://github.com/kubermatic/machine-controller/issues/682
+    # Exclude alibaba cloud until this is fixed https://github.com/magnusr/kubermatic-machine-controller/issues/682
     {{ if eq .CloudProviderName "alibaba" }}
     if grep -v -q swapaccount=1 /proc/cmdline
     then

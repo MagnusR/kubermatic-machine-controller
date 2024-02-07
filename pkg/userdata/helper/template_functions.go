@@ -24,7 +24,7 @@ import (
 	"github.com/Masterminds/sprig/v3"
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
 
 	corev1 "k8s.io/api/core/v1"
 )

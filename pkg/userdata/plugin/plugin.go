@@ -30,7 +30,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/kubermatic/machine-controller/pkg/apis/plugin"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/apis/plugin"
 )
 
 // Provider defines the interface each plugin has to implement

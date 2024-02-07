@@ -161,10 +161,10 @@ Thanks for taking the time to join our community and start contributing!
 
 See [the list of releases][7] to find out about feature changes.
 
-[1]: https://github.com/kubermatic/machine-controller/issues
+[1]: https://github.com/magnusr/kubermatic-machine-controller/issues
 [2]: https://kubermatic.slack.com/messages/kubermatic
 [3]: http://slack.kubermatic.io/
 [4]: code-of-conduct.md
 [5]: CONTRIBUTING.md
-[7]: https://github.com/kubermatic/machine-controller/releases
+[7]: https://github.com/magnusr/kubermatic-machine-controller/releases
 [8]: https://docs.kubermatic.com/operatingsystemmanager

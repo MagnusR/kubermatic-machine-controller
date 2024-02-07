@@ -28,11 +28,11 @@ import (
 	tinktmpl "github.com/tinkerbell/tink/protos/template"
 	"gopkg.in/yaml.v3"
 
-	cloudprovidererrors "github.com/kubermatic/machine-controller/pkg/cloudprovider/errors"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
-	tinkerbellclient "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/client"
-	metadataclient "github.com/kubermatic/machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/metadata"
-	"github.com/kubermatic/machine-controller/pkg/cloudprovider/util"
+	cloudprovidererrors "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/errors"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins"
+	tinkerbellclient "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/client"
+	metadataclient "github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/provider/baremetal/plugins/tinkerbell/metadata"
+	"github.com/magnusr/kubermatic-machine-controller/pkg/cloudprovider/util"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"

@@ -16,7 +16,7 @@ presubmits:
   - name: pull-machine-controller-e2e-azure
     run_if_changed: "(pkg/cloudprovider/provider/azure/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-azure: "true"
       preset-hetzner: "true"
@@ -48,7 +48,7 @@ presubmits:
   - name: pull-machine-controller-e2e-azure-custom-image-reference
     run_if_changed: "(pkg/cloudprovider/provider/azure/|pkg/userdata)"
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-azure: "true"
       preset-hetzner: "true"
@@ -81,7 +81,7 @@ presubmits:
     optional: true
     always_run: false
     decorate: true
-    clone_uri: "ssh://git@github.com/kubermatic/machine-controller.git"
+    clone_uri: "ssh://git@github.com/magnusr/kubermatic-machine-controller.git"
     labels:
       preset-azure: "true"
       preset-hetzner: "true"
