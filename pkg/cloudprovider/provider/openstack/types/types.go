@@ -44,6 +44,7 @@ type RawConfig struct {
 	Flavor                providerconfigtypes.ConfigVarString   `json:"flavor"`
 	SecurityGroups        []providerconfigtypes.ConfigVarString `json:"securityGroups,omitempty"`
 	Network               providerconfigtypes.ConfigVarString   `json:"network,omitempty"`
+	Networks              []providerconfigtypes.ConfigVarString `json:"networks,omitempty"`
 	Subnet                providerconfigtypes.ConfigVarString   `json:"subnet,omitempty"`
 	FloatingIPPool        providerconfigtypes.ConfigVarString   `json:"floatingIpPool,omitempty"`
 	AvailabilityZone      providerconfigtypes.ConfigVarString   `json:"availabilityZone,omitempty"`
