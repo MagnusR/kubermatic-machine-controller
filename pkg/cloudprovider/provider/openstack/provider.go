@@ -99,6 +99,7 @@ type Config struct {
 	Flavor                string
 	SecurityGroups        []string
 	Network               string
+	Networks              []string
 	Subnet                string
 	FloatingIPPool        string
 	AvailabilityZone      string
@@ -249,6 +250,14 @@ func (p *provider) getConfig(provSpec clusterv1alpha1.ProviderSpec) (*Config, *p
 	cfg.Network, err = p.configVarResolver.GetConfigVarStringValue(rawConfig.Network)
 	if err != nil {
 		return nil, nil, nil, err
+	}
+
+	for _, network := range rawConfig.Networks {
+		networkValue, err := p.configVarResolver.GetConfigVarStringValue(network)
+		if err != nil {
+			return nil, nil, nil, err
+		}
+		cfg.Networks = append(cfg.Networks, networkValue)
 	}
 
 	cfg.Subnet, err = p.configVarResolver.GetConfigVarStringValue(rawConfig.Subnet)
@@ -596,9 +605,17 @@ func (p *provider) Create(ctx context.Context, log *zap.SugaredLogger, machine *
 		return nil, err
 	}
 
-	network, err := getNetwork(netClient, cfg.Network)
-	if err != nil {
-		return nil, osErrorToTerminalError(log, err, fmt.Sprintf("failed to get network %s", cfg.Network))
+	var networks []osservers.Network
+	if len(cfg.Networks) != 0 {
+		for _, netUUID := range cfg.Networks {
+			networks = append(networks, osservers.Network{UUID: netUUID})
+		}
+	} else {
+		network, err := getNetwork(netClient, cfg.Network)
+		if err != nil {
+			return nil, osErrorToTerminalError(log, err, fmt.Sprintf("failed to get network %s", cfg.Network))
+		}
+		networks = append(networks, osservers.Network{UUID: network.ID})
 	}
 
 	securityGroups := cfg.SecurityGroups
@@ -621,7 +638,7 @@ func (p *provider) Create(ctx context.Context, log *zap.SugaredLogger, machine *
 		UserData:         []byte(userdata),
 		SecurityGroups:   securityGroups,
 		AvailabilityZone: cfg.AvailabilityZone,
-		Networks:         []osservers.Network{{UUID: network.ID}},
+		Networks:         networks,
 		Metadata:         allTags,
 	}
 
@@ -672,14 +689,27 @@ func (p *provider) Create(ctx context.Context, log *zap.SugaredLogger, machine *
 	if cfg.FloatingIPPool != "" {
 		instanceLog := log.With("instance", server.ID)
 
-		if err := p.portReadinessWaiter(ctx, instanceLog, netClient, server.ID, network.ID, cfg.InstanceReadyCheckPeriod, cfg.InstanceReadyCheckTimeout); err != nil {
-			instanceLog.Infow("Port for instance did not became active", zap.Error(err))
-		}
+		if len(cfg.Networks) != 0 {
+			for _, netUUID := range cfg.Networks {
+				if err := p.portReadinessWaiter(ctx, instanceLog, netClient, server.ID, netUUID, cfg.InstanceReadyCheckPeriod, cfg.InstanceReadyCheckTimeout); err != nil {
+					instanceLog.Infow("Port for instance did not became active", zap.Error(err))
+				}
+			}
+		} else {
+			network, err := getNetwork(netClient, cfg.Network)
+			if err != nil {
+				return nil, osErrorToTerminalError(log, err, fmt.Sprintf("failed to get network %s", cfg.Network))
+			}
 
-		// Find a free FloatingIP or allocate a new one.
-		if err := assignFloatingIPToInstance(instanceLog, data.Update, machine, netClient, server.ID, cfg.FloatingIPPool, cfg.Region, network); err != nil {
-			defer deleteInstanceDueToFatalLogged(instanceLog, computeClient, server.ID)
-			return nil, fmt.Errorf("failed to assign a floating ip to instance %s: %w", server.ID, err)
+			if err := p.portReadinessWaiter(ctx, instanceLog, netClient, server.ID, network.ID, cfg.InstanceReadyCheckPeriod, cfg.InstanceReadyCheckTimeout); err != nil {
+				instanceLog.Infow("Port for instance did not became active", zap.Error(err))
+			}
+
+			// Find a free FloatingIP or allocate a new one.
+			if err := assignFloatingIPToInstance(instanceLog, data.Update, machine, netClient, server.ID, cfg.FloatingIPPool, cfg.Region, network); err != nil {
+				defer deleteInstanceDueToFatalLogged(instanceLog, computeClient, server.ID)
+				return nil, fmt.Errorf("failed to assign a floating ip to instance %s: %w", server.ID, err)
+			}
 		}
 	}
 
